@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nursing Information System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Nursing Information System</h1>
+            <img src="C:\Users\sasil\Downloads\NISLOGO.jpg" alt="NIS Logo" class="logo">
+        </div>
+        <div class="right-panel">
+            <div class="form-container" id="login-form">
+                <h2 class="tagline">Thank you for choosing us, and for your unwavering trust</h2>    
+                <h2>Log in</h2>
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <div class="options">
+                    <label><input type="checkbox" class="remember-checkbox"> Remember Me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button>LOG IN</button>
+                <div class="social-login">
+                    <a href="#"><img src="icons8-facebook-24.png" alt="Facebook"></a>
+                    <a href="#"><img src="icons8-instagram-24.png" alt="Instagram"></a>
+                </div>
+                <p class="signup-link"><a href="#" onclick="showSignUp()">Sign Up</a></p>
+            </div>
+    
+            <!-- Sign Up Form -->
+            <div class="form-container" id="signup-form" style="display:none;">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Fullname" />
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <button>SIGN UP</button>
+                <p><a href="#" onclick="showLogin()">Back to Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSignUp() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('signup-form').style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
